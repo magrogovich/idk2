@@ -360,6 +360,75 @@ footer{
 }
 
 
+
+.slider-wrapper {
+    position: relative;
+  }
+  
+  .slider {
+    --slide-width: clamp(320px, 75vw, 800px);
+    --slide-height: clamp(240px, 75vh, 600px);
+    display: grid;
+    grid-auto-flow: column;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    max-width: var(--slide-width);
+    border: 5px solid #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.25);
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 0 auto;
+    border: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slide {
+    scroll-snap-align: start;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dots a {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    cursor: pointer;
+  }
+  .dots a:hover {
+    opacity: 1;
+  }
+  
+  .caption {
+    display: block;
+    margin-top: 25px;
+    color: #999;
+    letter-spacing: 0.5px;
+  }
+
 @keyframes float{
     0%{
         transform: translateY(0px);
@@ -376,11 +445,213 @@ footer{
 
 
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 5px;
+    background-color: #e2dfdf;
+    color: #555;
+    border-radius: 20px;
+    height: 200px;
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 14px;
+    }
+  }
+
+  
+.w-full {
+width: 100%;
+}
+
+.p-5 {
+padding: 20px;
+}
+  
+.w-full {
+width: 100%;
+}
+
+.mb-6 {
+margin-bottom: 24px;
+}
+
+.xl\:mb-0 {
+margin-bottom: 0;
+}
+
+.sm\:text-center {
+text-align: center;
+}
+  
 
 
+.mb-4 {
+    margin-bottom: 16px;
+  }
+  
+  .text-gray-900 {
+    color: #111;
+  }
+  
+  .text-3xl {
+    font-size: 3rem;
+  }
+  
+  .font-extrabold {
+    font-weight: 800;
+    font-size: 25;
+  }
+
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+  
+  .gap-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
 
 
+  .sm\:w-2\/4 {
+    width: 50%;
+  }
+  
+  .h-12 {
+    height: 3rem;
+  }
+  
+  .p-3 {
+    padding: 0.75rem;
+  }
+  
+  .text-gray-900 {
+    color: #111;
+  }
+  
+  .border {
+    border-width: 1px;
+  }
+  
+  .border-solid {
+    border-style: solid;
+  }
+  
+  .border-gray-300 {
+    border-color: #d1d5db;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
 
+  
+  .sm\:w-1\/4 {
+    width: 25%;
+  }
+  
+  .h-12 {
+    height: 3rem;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .bg-purple-600 {
+    background-color: #9b2c98;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .transition-all {
+    transition-property: all;
+  }
+  
+  .duration-300 {
+    transition-duration: 300ms;
+    margin: 0%;
+    margin-left: 10px;
+    background-color: #e6aa5c;
+    border: none;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover\:bg-purple-700:hover {
+    background-color: #8a1d89;
+  }
+
+  
+  .mt-3 {
+    margin-top: 0.75rem;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .sm\:text-center {
+    text-align: center;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .transition-all {
+    transition-property: all;
+  }
+  
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover\:text-gray-700:hover {
+    color: #4b5563;
+  }
+  
 
 
 
